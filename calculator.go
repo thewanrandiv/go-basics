@@ -1,6 +1,8 @@
 package main
 
-import ("fmt")
+import (
+	"fmt"
+)
 
 func main() {
 	var revenue int
@@ -11,6 +13,14 @@ func main() {
 
 	fmt.Println("Enter the expenses:")
 	fmt.Scanln(&expenses)
-	profit:=revenue-expenses
-	fmt.Println("The profit is:",profit)
+	profit := revenue - expenses
+	fmt.Println("The profit is:", profit)
+
+	name := "John"
+
+	PrintVal(&name)
+}
+func PrintVal(s *string) {
+	fmt.Println(*s)
+	fmt.Println(&s)
 }
